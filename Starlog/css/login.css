@@ -1,0 +1,166 @@
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+
+body {
+  background: #111;
+  font-family: "Pretendard", sans-serif;
+}
+
+/* APP */
+
+.app {
+  width: 390px;
+  height: 844px;
+
+  margin: 0 auto;
+
+  background: #2c2c2c;
+  border-radius: 20px;
+
+  overflow: hidden;
+  position: relative;
+}
+
+/* HEADER */
+
+.header {
+  position: absolute;
+  top: 44px;
+  left: 0;
+
+  width: 100%;
+
+  padding: 0 24px;
+
+  display: flex;
+  justify-content: flex-end;
+
+  z-index: 10;
+}
+
+.close-btn {
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #424242;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.close-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+/* CONTENT */
+
+.content {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 40px;
+}
+
+/* FOOTER */
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 60px;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  z-index: 10;
+}
+
+/* LOGIN BUTTON */
+
+.login-btn {
+  width: 304px;
+  height: 54px;
+
+  position: relative;
+
+  border: none;
+  border-radius: 120px;
+
+  background: #424242;
+
+  color: #fefefe;
+
+  cursor: pointer;
+  padding: 20;
+  margin-bottom: 20px;
+}
+
+/* 아이콘 */
+
+.login-icon {
+  position: absolute;
+
+  left: 20px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: white;
+  font-size: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 텍스트 */
+
+.login-btn span {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  color: #ededed;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+
+.empty {
+  width: 24px;
+}
+
+/* SIGNUP */
+
+.signup-btn {
+    margin-top: 8px;
+  background: none;
+  border: none;
+
+  color: #c4c4c4;
+  font-size: 16px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
