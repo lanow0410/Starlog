@@ -20,10 +20,55 @@
         <img src="icons/HeaderLogo.svg" alt="로고" />
       </div>
 
-      <button class="menu-btn">
+      <button class="menu-btn" id="menuBtn">
         ☰
       </button>
     </header>
+
+    <!-- OVERLAY -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- SIDE MENU -->
+  <aside class="side-menu" id="sideMenu">
+
+    <!-- CLOSE -->
+    <button class="close-btn" id="closeBtn"><img src="icons/icon.svg" alt="종료버튼" /></button>
+
+    <!-- MENU -->
+    <div class="side-menu-content">
+
+      <div class="menu-group">
+        <h3>서비스 메뉴</h3>
+        <div class="menu-items">
+          <button class="menu-item">
+            <span class="menu-icon"><img src="./icons/writer.svg" alt="Joy" /></span>
+            <span>기록 추가</span>
+          </button>
+          <button class="menu-item">
+            <span class="menu-icon"><img src="./icons/report.svg" alt="Joy" /></span>
+            <span>분석 리포트</span>
+          </button>
+          <button class="menu-item">
+            <span class="menu-icon"><img src="./icons/archive.svg" alt="Joy" /></span>
+            <span>나의 아카이브</span>
+          </button>
+          <button class="menu-item">
+            <span class="menu-icon"><img src="./icons/constellation.svg" alt="Joy" /></span>
+            <span>별자리 도감</span>
+          </button>
+          </div>
+      </div>
+
+      <div class="menu-group">
+        <h3>이용자</h3>
+        <button class="menu-item">
+          <span class="menu-icon"><img src="./icons/login.svg" alt="Login" /></span>
+          <span>로그인</span>
+        </button>
+      </div>
+
+    </div>
+  </aside>
 
     <!-- FILTER -->
     <section class="filter-wrap">
@@ -169,16 +214,20 @@
       <h2>별자리 도감</h2>
     </section>
 
-    <section class="card constellation-card">
-      <div class="constellation-icon"><img src="./icons/constellation.png" alt="Constellation"/></div>
-
+    <button class="card constellation-card">
+      <div class="constellation-icon">
+        <img src="./icons/constellation.svg" alt="Constellation"/>
+      </div>
+    
       <div class="constellation-content">
         <h3>별자리 도감</h3>
         <p>기록된 별자리를 살펴보세요</p>
       </div>
-
-      <div class="arrow">›</div>
-    </section>
+    
+      <div class="arrow">
+        <img src="./icons/arrow.svg" alt="Arrow"/>
+      </div>
+    </button>
 
     <!-- FLOAT -->
     <button class="floating-btn">
@@ -195,6 +244,6 @@
     </footer>
 
   </div>
-
+  <script src="js/main1.js"></script>
 </body>
 </html>
