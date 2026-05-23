@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Starlog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/write.css" />
+</head>
+
+<body>
+  <div class="app">
+    <div class="status-bar">
+      <div class="battery-outline"></div>
+      <div class="battery-tip"></div>
+      <div class="battery-fill"></div>
+      <div class="signal"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logo"></div>
+
+      <button class="menu-btn">
+        <div class="menu-icon-line"></div>
+      </button>
+    </header>
+
+    <!-- WRITE HEADER -->
+    <section class="write-header">
+      <button class="back-btn">
+        <div class="back-icon"></div>
+      </button>
+
+      <h1>기록 추가하기</h1>
+
+      <div class="header-space"></div>
+    </section>
+
+    <!-- TITLE -->
+    <section class="write-section">
+      <div class="section-title">
+        <h2>제목 작성</h2>
+        <p>기록을 한마디로 정의해보세요</p>
+      </div>
+
+      <div class="input-wrap">
+        <input type="text" placeholder="내용 입력" class="write-input" />
+        <span class="error-text">에러 메세지 영역</span>
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="write-section">
+      <div class="section-title">
+        <h2>내용 작성</h2>
+        <p>오늘의 활동을 간단히 남겨보세요</p>
+      </div>
+
+      <div class="input-wrap">
+        <textarea placeholder="내용 입력" class="write-textarea"></textarea>
+        <span class="error-text">에러 메세지 영역</span>
+      </div>
+    </section>
+
+    <!-- CATEGORY -->
+    <section class="write-section">
+      <div class="section-title">
+        <h2>카테고리 선택</h2>
+        <p>오늘의 행동 유형을 선택해주세요</p>
+      </div>
+
+      <div class="category-box">
+        <div class="category-scroll">
+
+          <button class="category-card active">
+            <div class="category-icon yellow">
+              <img src="./icons/Joy.png" alt="행복">
+            </div>
+
+            <span>행복</span>
+          </button>
+
+          <button class="category-card">
+            <div class="category-icon pink">
+              <img src="./icons/Love.png" alt="애정">
+            </div>
+
+            <span>애정</span>
+          </button>
+
+          <button class="category-card">
+            <div class="category-icon blue">
+              <img src="./icons/Peace.png" alt="평온">
+            </div>
+
+            <span>평온</span>
+          </button>
+
+          <button class="category-card">
+            <div class="category-icon green">
+              <img src="./icons/Stability.png" alt="안정">
+            </div>
+
+            <span>안정</span>
+          </button>
+
+          <button class="category-card">
+            <div class="category-icon orange">
+              <img src="./icons/Stress.png" alt="스트레스">
+            </div>
+
+            <span>스트레스</span>
+          </button>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TAG -->
+    <section class="write-section">
+      <div class="section-title">
+        <h2>태그 선택</h2>
+        <p>활동의 맥락을 태그로 남겨보세요</p>
+      </div>
+
+      <div class="tag-box">
+        <span>@ 사람 · # 맥락 · * 주제</span>
+      </div>
+
+      <span class="error-text">에러 메세지 영역</span>
+    </section>
+
+    <!-- ACTION -->
+    <section class="write-actions">
+      <button class="cancel-btn">취소</button>
+      <button class="save-btn">기록 저장하기</button>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-logo">Starlog</div>
+
+      <p>
+        Copyright ⓒ 2026, Starlog All rights reserved.
+      </p>
+    </footer>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starlog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/write.css" />
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div class="logo">
+                <img src="icons/HeaderLogo.svg" alt="로고" />
+            </div>
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+        </header>
+
+
+        <section class="write-page">
+
+            <!-- 뒤로가기 -->
+            <div class="write-top">
+
+                <button class="back-btn">
+                    <img src="./icons/back.svg" alt="back">
+                </button>
+
+                <h1>기록 추가하기</h1>
+
+                <div class="write-top-space"></div>
+
+            </div>
+
+            <!-- 제목 -->
+            <section class="write-section">
+                <div class="section-header single">
+                    <h2>제목 작성</h2>
+                </div>
+
+                <p class="section-desc">
+                    기록을 한마디로 정의해보세요
+                </p>
+
+                <input type="text" class="write-input" placeholder="내용 입력">
+
+                <span class="error-text">
+                    에러 메세지 영역
+                </span>
+            </section>
+
+            <!-- 내용 -->
+            <section class="write-section">
+                <div class="section-header single">
+                    <h2>내용 작성</h2>
+                </div>
+
+                <p class="section-desc">
+                    오늘의 활동을 간단히 남겨보세요
+                </p>
+
+                <textarea class="write-textarea" placeholder="내용 입력"></textarea>
+                <span class="error-text">
+                    에러 메세지 영역
+                </span>
+            </section>
+
+            <!-- 카테고리 -->
+            <section class="write-section">
+                <div class="section-header single">
+                    <h2>카테고리 선택</h2>
+                </div>
+
+                <p class="section-desc">
+                    오늘의 행동 유형을 선택해주세요
+                </p>
+
+                <div class="category-box">
+                    <div class="category-scroll">
+
+                        <button class="category-card active">
+                            <div class="category-icon yellow">
+                                <img src="./icons/Joy.png" alt="행복">
+                            </div>
+                            <span>행복</span>
+                        </button>
+
+                        <button class="category-card">
+                            <div class="category-icon pink">
+                                <img src="./icons/Love.png" alt="애정">
+                            </div>
+                            <span>애정</span>
+                        </button>
+
+                        <button class="category-card">
+                            <div class="category-icon blue">
+                                <img src="./icons/Peace.png" alt="평온">
+                            </div>
+                            <span>평온</span>
+                        </button>
+
+                        <button class="category-card">
+                            <div class="category-icon green">
+                                <img src="./icons/Calm.png" alt="안정">
+                            </div>
+                            <span>안정</span>
+                        </button>
+
+                        <button class="category-card">
+                            <div class="category-icon orange">
+                                <img src="./icons/Stress.png" alt="스트레스">
+                            </div>
+                            <span>스트레스</span>
+                        </button>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- 태그 -->
+            <section class="write-section">
+                <div class="section-header single">
+                    <h2>태그 선택</h2>
+                </div>
+
+                <p class="section-desc">
+                    활동의 맥락을 태그로 남겨보세요
+                </p>
+
+                <input type="text" class="write-input" placeholder="@ 사람 · # 맥락 · * 주제">
+                <span class="error-text">
+                    에러 메세지 영역
+                </span>
+            </section>
+
+            <!-- 버튼 -->
+            <div class="write-actions">
+                <button class="cancel-btn">
+                    취소
+                </button>
+
+                <button class="save-btn">
+                    기록 저장하기
+                </button>
+            </div>
+
+        </section>
+
+    </div>
+</body>
+
+</html>

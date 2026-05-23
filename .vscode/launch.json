@@ -6,11 +6,14 @@
     "configurations": [
 
 
+
+
+
         {
             "type": "editor-browser",
             "request": "launch",
-            "name": "Open main.html",
-            "url": "file:///d%3A/VS_CODE/chatGpt_Test/main1.html"
+            "name": "Open main1.html",
+            "url": "file:///d%3A/VS_CODE/Starlog/main1.html"
         }
     ]
 }
