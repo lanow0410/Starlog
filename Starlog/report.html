@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>분석 리포트</title>
+    <link rel="stylesheet" href="css/report.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <header class="header">
+            <div class="logo">
+                <img src="icons/HeaderLogo.svg" alt="로고" />
+            </div>
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+        </header>
+
+        <section class="report-section">
+            <!-- 뒤로가기 -->
+            <div class="report-top">
+                <button class="back-btn">
+                    <img src="./icons/back.svg" alt="back">
+                </button>
+
+                <h1>분석 리포트</h1>
+
+                <div class="report-top-space"></div>
+
+            </div>
+
+            <section class="date-selector">
+                <span>DAILY</span>
+                <span>12.21.</span>
+                <button class="date-btn">
+                    <img src="./icons/arrowDown.svg" alt="select date">
+                </button>
+            </section>
+
+            <section class="summary-section">
+                <h2>기록 요약</h2>
+                <p>어제보다 기록의 밀도가 높아졌어요</p>
+
+
+            </section>
+
+            <section class="weekly-card">
+                <h3>이번주 활동내역</h3>
+
+                <div class="week-chart">
+                    <div class="day">
+                        <span>9</span>
+                        <div class="bar h55"></div>
+                        <span>월</span>
+                    </div>
+
+                    <div class="day">
+                        <span>3</span>
+                        <div class="bar h28"></div>
+                        <span>화</span>
+                    </div>
+
+                    <div class="day">
+                        <span>1</span>
+                        <div class="bar h4"></div>
+                        <span>수</span>
+                    </div>
+
+                    <div class="day active">
+                        <span>2</span>
+                        <div class="bar h16"></div>
+                        <span>목</span>
+                    </div>
+
+                    <div class="day"><span>금</span></div>
+                    <div class="day"><span>토</span></div>
+                    <div class="day"><span>일</span></div>
+                </div>
+
+                <div class="weekly-footer">
+                    <span>하루 평균 기록수</span>
+                    <span>3.9 기록</span>
+                </div>
+            </section>
+
+            <section class="activity-section">
+                <h2>대화 중심 하루였어요</h2>
+                <p>전체 활동 중 52%가 대화 관련 행동이였어요</p>
+
+                <div class="summary-cards">
+                    <div class="category-card">
+                        <div class="summary-icon">
+                            <img src="icons/Joy.png" alt="">
+                        </div>
+
+                        <span class="category-name">대화</span>
+                    </div>
+
+                    <div class="count-card">
+                        <div class="count">
+                            <strong>40</strong>개
+                        </div>
+                        <p>오늘의 기록수</p>
+                    </div>
+
+                </div>
+
+                <div class="distribution-card">
+                    <h3>오늘의 활동 분포</h3>
+
+                    <!-- 대화 -->
+                    <div class="progress-item">
+                        <!-- 왼쪽 이미지 -->
+                        <div class="activity-icon">
+                            <img src="./icons/Joy.png" alt="">
+                        </div>
+
+                        <!-- 오른쪽 -->
+                        <div class="activity-info">
+                            <!-- 위 -->
+                            <div class="activity-top">
+                                <span class="activity-name">대화</span>
+                                <span class="activity-percent">52%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="fill w52"></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- 소비 -->
+                    <div class="progress-item">
+                        <!-- 왼쪽 이미지 -->
+                        <div class="activity-icon">
+                            <img src="./icons/Love.png" alt="">
+                        </div>
+
+                        <!-- 오른쪽 -->
+                        <div class="activity-info">
+                            <div class="activity-top">
+                                <span class="activity-name">소비</span>
+                                <span class="activity-percent">18%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="fill w18"></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- 생산 -->
+                    <div class="progress-item">
+                        <!-- 왼쪽 이미지 -->
+                        <div class="activity-icon">
+                            <img src="./icons/Peace.png" alt="">
+                        </div>
+
+                        <!-- 오른쪽 -->
+                        <div class="activity-info">
+                            <div class="activity-top">
+                                <span class="activity-name">생산</span>
+                                <span class="activity-percent">30%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="fill w30"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="tag-section">
+                <h2>맥락 기록이 많았어요</h2>
+                <p>전체 활동 중 62%가 이동중 일어났어요</p>
+
+                <div class="tag-card">
+                    <h3>오늘의 태그 흐름</h3>
+                    <div class="tag-flow">
+
+                        <!-- 도넛 -->
+                        <div class="donut-chart">
+                            <div class="inner-circle"></div>
+                        </div>
+
+                        <!-- 범례 -->
+                        <div class="tag-legend">
+                            <div class="legend-item">
+                                <span class="dot firstDot"></span>
+                                <span>#이동중</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="dot secondDot"></span>
+                                <span>#아침</span> <span class="new-tag">4개</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="dot thirdDot"></span>
+                                <span>@신희</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="insight-card">
+                <h3>데일리 인사이트</h3>
+                <p>
+                    신희 태그가 1회 반복되었어요.<br>
+                    아침 태그가 새로 추가되었어요.
+                </p>
+            </section>
+
+            <section class="record-section">
+                <h2>기록 추가하기</h2>
+                <p>더욱 많은 기록을 추가해 분석해보세요</p>
+
+                <button class="record-btn">
+                    기록 추가하기 <img src="./icons/arrow.svg" alt="add record">
+                </button>
+            </section>
+        </section>
+        <footer>
+            <div class="footer-logo">Starlog</div>
+            <div class="copyright">
+                Copyright ⓒ 2026, Starlog All rights reserved.
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
