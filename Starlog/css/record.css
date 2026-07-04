@@ -57,14 +57,14 @@ body {
     cursor: pointer;
 }
 
-/* ================= RECODE ================= */
+/* ================= RECORD ================= */
 
-.recode-section {
+.record-section {
     padding: 0 24px;
     margin-bottom: 40px;
 }
 
-.recode-top {
+.record-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -73,7 +73,7 @@ body {
     position: relative;
 }
 
-.recode-top h1 {
+.record-top h1 {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
