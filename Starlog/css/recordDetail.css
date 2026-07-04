@@ -1,0 +1,682 @@
+/* ================= RESET ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#111;
+    color:#EDEDED;
+
+    font-family:"Pretendard",sans-serif;
+
+    display:flex;
+    justify-content:center;
+}
+
+.app{
+
+    width:100%;
+    max-width:390px;
+
+    margin:0 auto;
+
+    background:#2C2C2C;
+
+    padding-top:env(safe-area-inset-top);
+    padding-bottom:env(safe-area-inset-bottom);
+}
+
+
+/* ================= HEADER ================= */
+
+.header{
+
+    height:56px;
+
+    margin-top:44px;
+    padding:8px 24px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo img{
+
+    height:28px;
+    display:block;
+}
+
+.menu-btn{
+
+    width:40px;
+    height:40px;
+
+    border:none;
+    border-radius:20px;
+
+    background:#424242;
+    color:#EDEDED;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    transition:.2s;
+}
+
+.menu-btn:hover{
+
+    background:#575757;
+}
+
+/* ================= PRINTER ================= */
+.printer-area {
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.printer-btn {
+    width: 40px;
+    height: 40px;
+
+    align-self: flex-end;
+
+    border: none;
+    border-radius: 20px;
+
+    background: #424242;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    transition: background .2s ease;
+}
+
+.printer-btn:hover {
+    background: #575757;
+}
+
+.printer-btn:active {
+    background: #7C58F4;
+}
+
+
+
+/* ================= DETAIL ================= */
+
+.detail-section{
+
+    padding:0 24px 60px;
+}
+
+.detail-top{
+
+    padding:24px 0;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    position:relative;
+}
+
+.detail-top h1{
+
+    position:absolute;
+
+    left:50%;
+    transform:translateX(-50%);
+
+    font-size:20px;
+    font-weight:800;
+}
+
+.top-space{
+
+    width:40px;
+}
+
+.back-btn{
+
+    width:40px;
+    height:40px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#2C2C2C;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    cursor:pointer;
+}
+
+
+/* ================= IMAGE ================= */
+
+.detail-image{
+
+    position:relative;
+
+    width:100%;
+    height:152px;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    margin-bottom:20px;
+}
+
+.detail-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+.image-edit-btn{
+
+    position:absolute;
+
+    right:12px;
+    bottom:12px;
+
+    width:40px;
+    height:40px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#424242;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    cursor:pointer;
+}
+
+
+/* ================= CARD ================= */
+
+.detail-card{
+
+    background:#424242;
+
+    border-radius:20px;
+
+    padding:20px 12px;
+
+    margin-bottom:20px;
+}
+
+.card-title{
+
+    padding-bottom:20px;
+    margin-bottom:20px;
+
+    border-bottom:1px solid #757575;
+
+    font-size:16px;
+    font-weight:800;
+}
+
+.detail-content{
+
+    font-size:14px;
+    line-height:20px;
+
+    color:#EDEDED;
+}
+
+
+/* ================= CATEGORY ================= */
+
+.category-list{
+
+    display:flex;
+    gap:16px;
+
+    overflow-x:auto;
+
+    scrollbar-width:none;
+}
+
+.category-list::-webkit-scrollbar{
+
+    display:none;
+}
+
+.category-item{
+
+    width:84px;
+
+    flex-shrink:0;
+
+    padding:16px 12px;
+
+    border-radius:20px;
+
+    background:#424242;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    gap:8px;
+}
+
+.category-item.active{
+
+    background:#757575;
+}
+
+.emotion-circle{
+
+    width:52px;
+    height:52px;
+
+    border-radius:50%;
+
+    background:rgba(255,241,212,.2);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.emotion-circle img{
+
+    width:48px;
+    height:48px;
+}
+
+.category-item span{
+
+    font-size:14px;
+    font-weight:500;
+}
+
+
+/* ================= TAG ================= */
+
+.tag-list{
+
+    display:flex;
+    flex-wrap:wrap;
+
+    gap:12px;
+}
+
+.tag{
+
+    padding:8px 12px;
+
+    background:#757575;
+
+    border-radius:20px;
+
+    font-size:14px;
+    font-weight:500;
+}
+
+/* ================= BUTTON ================= */
+
+.button-group{
+
+    display:flex;
+    justify-content:space-between;
+
+    gap:18px;
+
+    margin-bottom:40px;
+}
+
+.delete-btn{
+
+    width:132px;
+    height:48px;
+
+    border:none;
+    border-radius:20px;
+
+    background:#424242;
+    color:#EDEDED;
+
+    font-size:18px;
+    font-weight:500;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.delete-btn:hover{
+
+    background:#575757;
+}
+
+.delete-btn:active{
+
+    background:#6A6A6A;
+}
+
+.edit-btn{
+
+    flex:1;
+    height:48px;
+
+    border:none;
+    border-radius:20px;
+
+    background:#7C58F4;
+    color:#FEFEFE;
+
+    font-size:18px;
+    font-weight:500;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.edit-btn:hover{
+
+    background:#8B6AF7;
+}
+
+.edit-btn:active{
+
+    background:#6945E5;
+}
+
+
+/* ================= RELATED ================= */
+
+.related-top{
+
+    margin-bottom:20px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+}
+
+.related-top h2{
+
+    font-size:20px;
+    font-weight:800;
+
+    margin-bottom:8px;
+}
+
+.related-top p{
+
+    color:#C4C4C4;
+
+    font-size:14px;
+    line-height:16px;
+}
+
+.page-count{
+
+    padding:8px 12px;
+
+    background:#757575;
+
+    border-radius:20px;
+
+    font-size:14px;
+    font-weight:500;
+}
+
+
+/* ================= RELATED CARD ================= */
+
+.related-list{
+
+    display:flex;
+    gap:12px;
+
+    overflow-x:auto;
+
+    padding-bottom:8px;
+
+    margin-bottom:40px;
+
+    scroll-snap-type:x mandatory;
+
+    scrollbar-width:none;
+}
+
+.related-list::-webkit-scrollbar{
+
+    display:none;
+}
+
+.related-list .diary-card{
+
+    min-width:342px;
+
+    flex-shrink:0;
+
+    scroll-snap-align:start;
+
+    background:#424242;
+
+    border-radius:20px;
+
+    padding:20px 12px;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:12px;
+}
+
+
+/* ===== card header ===== */
+
+.card-header{
+
+    display:flex;
+    align-items:center;
+
+    gap:8px;
+}
+
+.emotion-icon{
+
+    width:32px;
+    height:32px;
+
+    position:relative;
+
+    flex-shrink:0;
+}
+
+.emotion-bg{
+
+    width:32px;
+    height:32px;
+
+    border-radius:50%;
+
+    background:rgba(255,241,212,.2);
+}
+
+.emotion-image{
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:30px;
+    height:30px;
+}
+
+.nickname{
+
+    font-size:16px;
+    font-weight:500;
+}
+
+.dot{
+
+    color:#C4C4C4;
+}
+
+.date{
+
+    color:#C4C4C4;
+
+    font-size:12px;
+}
+
+
+/* ===== card body ===== */
+
+.card-body{
+
+    display:flex;
+
+    gap:12px;
+}
+
+.card-image{
+
+    width:92px;
+    height:92px;
+
+    overflow:hidden;
+
+    border-radius:4px;
+
+    flex-shrink:0;
+}
+
+.card-image img{
+
+    width:164px;
+    height:92px;
+
+    margin-left:-36px;
+
+    object-fit:cover;
+}
+
+.card-info{
+
+    flex:1;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:space-between;
+}
+
+.card-content{
+
+    font-size:14px;
+
+    line-height:20px;
+}
+
+
+/* ================= MAIN BUTTON ================= */
+
+.main-btn{
+
+    width:100%;
+    height:48px;
+
+    margin-bottom:60px;
+
+    border:none;
+    border-radius:20px;
+
+    background:#424242;
+    color:#FEFEFE;
+
+    font-size:18px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.main-btn:hover{
+
+    background:#575757;
+}
+
+.main-btn:active{
+
+    background:#6A6A6A;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    padding:20px 0;
+
+    border-top:1px solid #F9F9F9;
+
+    text-align:center;
+}
+
+.footer-logo{
+
+    margin-bottom:8px;
+
+    font-size:24px;
+    font-weight:800;
+}
+
+.copyright{
+
+    color:#C4C4C4;
+
+    font-size:12px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width:390px){
+
+    .button-group{
+
+        gap:12px;
+    }
+
+    .delete-btn{
+
+        width:120px;
+    }
+
+    .related-list .diary-card{
+
+        min-width:100%;
+    }
+}

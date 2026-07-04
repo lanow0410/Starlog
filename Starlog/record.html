@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>분석 리포트</title>
+    <link rel="stylesheet" href="css/recod.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <header class="header">
+            <div class="logo">
+                <img src="icons/HeaderLogo.svg" alt="로고" />
+            </div>
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+        </header>
+
+        <section class="recode-section">
+            <!-- 뒤로가기 -->
+            <div class="recode-top">
+                <button class="back-btn">
+                    <img src="./icons/back.svg" alt="back">
+                </button>
+
+                <h1>나의 기록</h1>
+
+                <div class="recode-top-space"></div>
+            </div>
+
+            <div class="search-area">
+                <div class="search-box">
+                    <img src="icons/search.svg" alt="">
+                    <input type="text" placeholder="검색 내용 입력">
+                </div>
+
+                <button class="filter-btn">
+                    <img src="icons/filter.svg" alt="">
+                </button>
+
+                <div class="selected-filters" id="selectedFilters">
+                    <div class="selected-list" id="selectedList"></div>
+                </div>
+            </div>
+
+
+            <div class="diary-list">
+
+                <article class="diary-card">
+
+                    <div class="card-header">
+
+                        <div class="emotion-icon">
+                            <div class="emotion-bg"></div>
+                            <img class="emotion-image" src="icons/Joy.png" alt="">
+                        </div>
+
+                        <span class="nickname">행복</span>
+                        <span class="dot">·</span>
+                        <span class="date">26년 4월 12일</span>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="card-image">
+                            <img src="https://placehold.co/164x92" alt="">
+                        </div>
+
+                        <div class="card-info">
+
+                            <p class="card-content">
+                                오랜만에 친구 만나서 같이 수다 떨음<br>
+                                최근 유행하는 영화도 보러 갔다옴
+                            </p>
+
+                            <div class="tag-list">
+                                <span class="tag">영화관</span>
+                                <span class="tag">휴식</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="diary-card">
+
+                    <div class="card-header">
+
+                        <div class="emotion-icon">
+                            <div class="emotion-bg"></div>
+                            <img class="emotion-image" src="icons/Joy.png" alt="">
+                        </div>
+
+                        <span class="nickname">행복</span>
+                        <span class="dot">·</span>
+                        <span class="date">26년 4월 12일</span>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="card-image">
+                            <img src="https://placehold.co/164x92" alt="">
+                        </div>
+
+                        <div class="card-info">
+
+                            <p class="card-content">
+                                오랜만에 친구 만나서 같이 수다 떨음<br>
+                                최근 유행하는 영화도 보러 갔다옴
+                            </p>
+
+                            <div class="tag-list">
+                                <span class="tag">영화관</span>
+                                <span class="tag">휴식</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+            <!-- Filter Modal -->
+            <div class="filter-modal" id="filterModal">
+
+                <!-- 어두운 배경 -->
+                <div class="filter-overlay"></div>
+
+                <!-- Bottom Sheet -->
+                <div class="filter-sheet">
+
+                    <!-- 기간 -->
+                    <div class="filter-group">
+
+                        <h3>📅 기간</h3>
+
+                        <div class="chip-wrap">
+                            <button class="chip active">전체</button>
+                            <button class="chip">최근 1개월</button>
+                            <button class="chip">최근 6개월</button>
+                            <button class="chip">1년 이상</button>
+                        </div>
+
+                    </div>
+
+                    <!-- 감정 -->
+                    <div class="filter-group">
+
+                        <h3>📝 감정</h3>
+
+                        <div class="chip-wrap">
+                            <button class="chip active">전체</button>
+                            <button class="chip">행복</button>
+                            <button class="chip">애정</button>
+                            <button class="chip">평온</button>
+                            <button class="chip">안정</button>
+                            <button class="chip">스트레스</button>
+                        </div>
+
+                    </div>
+
+                    <div class="filter-bottom">
+
+                        <button class="reset-btn">
+                            초기화
+                        </button>
+
+                        <button class="apply-btn">
+                            적용하기
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <footer>
+            <div class="footer-logo">Starlog</div>
+            <div class="copyright">
+                Copyright ⓒ 2026, Starlog All rights reserved.
+            </div>
+        </footer>
+
+    </div>
+    <script src="js/recode.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Starlog | 별자리 도감</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/encyclopedia.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Header -->
+
+        <header class="header">
+
+            <div class="logo">
+                Starlog
+            </div>
+
+            <button class="menu-btn">
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+
+            </button>
+
+        </header>
+
+        <!-- Page Title -->
+
+        <section class="page-title">
+
+            <button class="back-btn">
+
+                <svg viewBox="0 0 24 24">
+
+                    <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+
+                </svg>
+
+            </button>
+
+            <h1>
+                별자리 도감
+            </h1>
+
+            <div class="empty"></div>
+
+        </section>
+
+        <!-- Category -->
+
+        <section class="category-scroll">
+
+            <button class="category active">
+                전체
+            </button>
+
+            <button class="category">
+                <span class="circle dialogue"></span>
+                대화
+            </button>
+
+            <button class="category">
+                <span class="circle love"></span>
+                애정
+            </button>
+
+            <button class="category">
+                <span class="circle calm"></span>
+                평온
+            </button>
+
+            <button class="category">
+                <span class="circle stable"></span>
+                안정
+            </button>
+
+            <button class="category">
+                <span class="circle stress"></span>
+                스트레스
+            </button>
+
+        </section>
+
+        <!-- Grid -->
+
+        <section class="constellation-grid">
+
+            <!-- Card -->
+
+            <article class="card">
+                <div class="card-header">
+                    <div class="card-title">
+
+                        <span class="circle dialogue"></span>
+
+                        <span>
+                            대화
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="constellation-preview">
+
+                    <div class="star s1"></div>
+                    <div class="star s2"></div>
+                    <div class="star s3"></div>
+                    <div class="star s4"></div>
+                    <div class="star s5"></div>
+                    <div class="star s6"></div>
+                    <div class="star s7"></div>
+                    <div class="star s8"></div>
+                    <div class="star s9"></div>
+
+                    <div class="planet blue p1"></div>
+                    <div class="planet blue p2"></div>
+
+                    <div class="planet yellow p3"></div>
+                    <div class="planet yellow p4"></div>
+                    <div class="planet yellow p5"></div>
+
+                </div>
+
+                <div class="constellation-name">
+
+                    오각형 별자리
+
+                </div>
+
+            </article>
+
+            <!-- Card -->
+
+            <article class="card empty-card">
+
+                <div class="coming">
+
+                    <svg viewBox="0 0 24 24">
+
+                        <path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9Z" fill="currentColor" />
+
+                    </svg>
+
+                    <span>
+
+                        Coming Soon
+
+                    </span>
+
+                </div>
+
+            </article>
+
+            <!-- Card -->
+
+            <article class="card">
+
+                <div class="card-header">
+
+                    <div class="card-title">
+
+                        <span class="circle love"></span>
+
+                        <span>
+
+                            애정
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="constellation-preview">
+
+                    <div class="star s1"></div>
+                    <div class="star s2"></div>
+                    <div class="star s3"></div>
+                    <div class="star s4"></div>
+                    <div class="star s5"></div>
+                    <div class="star s6"></div>
+                    <div class="star s7"></div>
+                    <div class="star s8"></div>
+
+                    <div class="planet pink p1"></div>
+                    <div class="planet blue p2"></div>
+                    <div class="planet yellow p3"></div>
+                    <div class="planet pink p4"></div>
+                    <div class="planet pink p5"></div>
+
+                </div>
+
+                <div class="constellation-name">
+
+                    하트 자리
+
+                </div>
+
+            </article>
+
+            <!-- Card -->
+
+            <article class="card empty-card">
+
+                <div class="coming">
+
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9Z" fill="currentColor" />
+                    </svg>
+
+                    <span>Coming Soon</span>
+
+                </div>
+
+            </article>
+
+            <!-- Card -->
+
+            <article class="card">
+
+                <div class="card-header">
+
+                    <div class="card-title">
+
+                        <span class="circle calm"></span>
+
+                        <span>평온</span>
+
+                    </div>
+
+                </div>
+
+                <div class="constellation-preview">
+
+                    <div class="star s1"></div>
+                    <div class="star s2"></div>
+                    <div class="star s3"></div>
+                    <div class="star s4"></div>
+                    <div class="star s5"></div>
+                    <div class="star s6"></div>
+                    <div class="star s7"></div>
+                    <div class="star s8"></div>
+
+                    <div class="planet cyan p1"></div>
+                    <div class="planet cyan p2"></div>
+                    <div class="planet blue p3"></div>
+                    <div class="planet cyan p4"></div>
+
+                </div>
+
+                <div class="constellation-name">
+
+                    잔잔한 호수
+
+                </div>
+
+            </article>
+
+            <!-- Card -->
+
+            <article class="card">
+
+                <div class="card-header">
+
+                    <div class="card-title">
+
+                        <span class="circle stable"></span>
+
+                        <span>안정</span>
+
+                    </div>
+
+                </div>
+
+                <div class="constellation-preview">
+
+                    <div class="star s1"></div>
+                    <div class="star s2"></div>
+                    <div class="star s3"></div>
+                    <div class="star s4"></div>
+                    <div class="star s5"></div>
+                    <div class="star s6"></div>
+                    <div class="star s7"></div>
+
+                    <div class="planet green p1"></div>
+                    <div class="planet green p2"></div>
+                    <div class="planet yellow p3"></div>
+
+                </div>
+
+                <div class="constellation-name">
+
+                    네잎클로버
+
+                </div>
+
+            </article>
+
+            <!-- Card -->
+
+            <article class="card">
+
+                <div class="card-header">
+
+                    <div class="card-title">
+
+                        <span class="circle stress"></span>
+
+                        <span>스트레스</span>
+
+                    </div>
+
+                </div>
+
+                <div class="constellation-preview">
+
+                    <div class="star s1"></div>
+                    <div class="star s2"></div>
+                    <div class="star s3"></div>
+                    <div class="star s4"></div>
+                    <div class="star s5"></div>
+                    <div class="star s6"></div>
+
+                    <div class="planet orange p1"></div>
+                    <div class="planet red p2"></div>
+                    <div class="planet orange p3"></div>
+
+                </div>
+
+                <div class="constellation-name">
+
+                    불꽃 자리
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <!-- Pagination -->
+
+        <section class="pagination">
+
+            <span class="page active"></span>
+
+            <span class="page"></span>
+
+            <span class="page"></span>
+
+            <span class="page"></span>
+
+        </section>
+
+        <!-- Footer -->
+
+        <footer>
+
+            <div class="footer-logo">
+
+                Starlog
+
+            </div>
+
+            <p>
+                Copyright ⓒ 2026 Starlog All rights reserved.
+            </p>
+
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

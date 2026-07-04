@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기록 상세</title>
+
+    <link rel="stylesheet" href="css/recordDetail.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- ================= HEADER ================= -->
+
+        <header class="header">
+
+            <div class="logo">
+                <img src="icons/HeaderLogo.svg" alt="Starlog">
+            </div>
+
+            <button class="menu-btn">
+                ☰
+            </button>
+
+        </header>
+
+        <!-- ================= DETAIL ================= -->
+
+        <section class="detail-section">
+
+            <!-- 제목 -->
+
+            <div class="detail-top">
+
+                <button class="back-btn">
+                    <img src="icons/back.svg" alt="">
+                </button>
+
+                <h1>제목 영역</h1>
+
+                <div class="top-space"></div>
+
+            </div>
+
+            <!-- 프린터 버튼 -->
+
+            <div class="printer-area">
+                <button class="printer-btn">
+                    <img src="icons/printer.svg" alt="">
+                </button>
+            </div>
+
+            <!-- 대표 이미지 -->
+
+            <div class="detail-image">
+
+                <img src="https://placehold.co/452x254" alt="">
+
+                <button class="image-edit-btn">
+                    <img src="icons/edit.svg" alt="">
+                </button>
+
+            </div>
+
+            <!-- 기록 내용 -->
+
+            <article class="detail-card">
+
+                <div class="card-title">
+                    기록 내용
+                </div>
+
+                <p class="detail-content">
+                    오랜만에 친구 만나서 같이 수다 떨음<br>
+                    최근 유행하는 영화도 보러 갔다옴<br>
+                    휴식되는 느낌
+                </p>
+
+            </article>
+
+            <!-- 선택된 카테고리 -->
+
+            <article class="detail-card">
+
+                <div class="card-title">
+                    선택된 카테고리
+                </div>
+
+                <div class="category-list">
+
+                    <div class="category-item active">
+
+                        <div class="emotion-circle">
+                            <img src="icons/Joy.png" alt="">
+                        </div>
+
+                        <span>행복</span>
+
+                    </div>
+
+                    <div class="category-item">
+
+                        <div class="emotion-circle">
+                            <img src="icons/Love.png" alt="">
+                        </div>
+
+                        <span>애정</span>
+
+                    </div>
+
+                    <div class="category-item">
+
+                        <div class="emotion-circle">
+                            <img src="icons/Peace.png" alt="">
+                        </div>
+
+                        <span>평온</span>
+
+                    </div>
+
+                    <div class="category-item">
+
+                        <div class="emotion-circle">
+                            <img src="icons/Stable.png" alt="">
+                        </div>
+
+                        <span>안정</span>
+
+                    </div>
+
+                    <div class="category-item">
+
+                        <div class="emotion-circle">
+                            <img src="icons/Stress.png" alt="">
+                        </div>
+
+                        <span>스트레스</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <!-- 태그 -->
+
+            <article class="detail-card">
+
+                <div class="card-title">
+                    선택된 태그
+                </div>
+
+                <div class="tag-list">
+
+                    <span class="tag">신희</span>
+
+                    <span class="tag">좋은날좋은일</span>
+
+                    <span class="tag">외식</span>
+
+                </div>
+
+            </article>
+
+            <!-- 버튼 -->
+
+            <div class="button-group">
+
+                <button class="delete-btn">
+                    삭제
+                </button>
+
+                <button class="edit-btn">
+                    기록 수정하기
+                </button>
+
+            </div>
+
+            <!-- 관련 기록 -->
+
+            <div class="related-top">
+
+                <div>
+
+                    <h2>관련 기록</h2>
+
+                    <p>유사한 성격의 기록을 모아봤어요</p>
+
+                </div>
+
+                <span class="page-count">
+                    1 / 12
+                </span>
+
+            </div>
+
+            <div class="related-list">
+
+                <!-- 카드1 -->
+
+                <article class="diary-card">
+
+                    <div class="card-header">
+
+                        <div class="emotion-icon">
+
+                            <div class="emotion-bg"></div>
+
+                            <img class="emotion-image" src="icons/Joy.png" alt="">
+
+                        </div>
+
+                        <span class="nickname">행복</span>
+
+                        <span class="dot">·</span>
+
+                        <span class="date">26년 4월 12일</span>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="card-image">
+
+                            <img src="https://placehold.co/164x92" alt="">
+
+                        </div>
+
+                        <div class="card-info">
+
+                            <p class="card-content">
+
+                                오랜만에 친구 만나서 같이 수다 떨음<br>
+
+                                최근 유행하는 영화도 보러 갔다옴
+
+                            </p>
+
+                            <div class="tag-list">
+
+                                <span class="tag">
+                                    영화관
+                                </span>
+
+                                <span class="tag">
+                                    휴식
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <!-- 카드2 -->
+
+                <article class="diary-card">
+
+                    <div class="card-header">
+
+                        <div class="emotion-icon">
+                            <div class="emotion-bg"></div>
+                            <img class="emotion-image" src="icons/Joy.png" alt="">
+                        </div>
+
+                        <span class="nickname">행복</span>
+                        <span class="dot">·</span>
+                        <span class="date">26년 4월 12일</span>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="card-image">
+                            <img src="https://placehold.co/164x92" alt="">
+                        </div>
+
+                        <div class="card-info">
+
+                            <p class="card-content">
+                                오랜만에 친구 만나서 같이 수다 떨음<br>
+                                최근 유행하는 영화도 보러 갔다옴
+                            </p>
+
+                            <div class="tag-list">
+                                <span class="tag">영화관</span>
+                                <span class="tag">휴식</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 카드3 -->
+
+                <article class="diary-card">
+
+                    <div class="card-header">
+
+                        <div class="emotion-icon">
+                            <div class="emotion-bg"></div>
+                            <img class="emotion-image" src="icons/Joy.png" alt="">
+                        </div>
+
+                        <span class="nickname">행복</span>
+                        <span class="dot">·</span>
+                        <span class="date">26년 4월 12일</span>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="card-image">
+                            <img src="https://placehold.co/164x92" alt="">
+                        </div>
+
+                        <div class="card-info">
+
+                            <p class="card-content">
+                                오랜만에 친구 만나서 같이 수다 떨음<br>
+                                최근 유행하는 영화도 보러 갔다옴
+                            </p>
+
+                            <div class="tag-list">
+                                <span class="tag">영화관</span>
+                                <span class="tag">휴식</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+            <!-- 메인으로 -->
+
+            <button class="main-btn">
+                메인으로
+            </button>
+
+        </section>
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer>
+
+            <div class="footer-logo">
+                Starlog
+            </div>
+
+            <div class="copyright">
+                Copyright ⓒ 2026, Starlog All rights reserved.
+            </div>
+
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
