@@ -1,0 +1,164 @@
+/* ==========================================================================
+   COMMON NAVIGATION COMPONENT (HEADER, SIDE MENU, OVERLAY)
+   ========================================================================== */
+
+/* 1. HEADER */
+.header {
+    width: 100%;
+    height: 56px;
+    margin-top: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 24px;
+    border-bottom: none;
+}
+
+.logo {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    display: block;
+}
+
+.menu-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background: #424242;
+    color: #ededed;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* 2. OVERLAY (배경 어두워지는 효과) */
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .45);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    z-index: 999;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 3. SIDE MENU */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -240px;
+    /* 원래 코드 스펙 유지 (너비보다 크게 숨김) */
+    width: 208px;
+    height: 100vh;
+    background: #2C2C2C;
+    padding: 24px;
+    z-index: 1000;
+    transition: right .3s ease;
+}
+
+.side-menu.active {
+    right: 0;
+}
+
+/* SIDE MENU INNER CONTENT */
+.side-menu-content {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    border: none;
+    border-radius: 50%;
+    background: #424242;
+    color: #EDEDED;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 36px;
+}
+
+.close-btn img {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+/* MENU GROUP */
+.menu-group {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 36px;
+}
+
+.menu-group h3 {
+    color: #EDEDED;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+/* MENU ITEMS & LINK BUTTONS */
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    /* 아이템 간 간격 */
+}
+
+.menu-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: #EDEDED;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: left;
+}
+
+.menu-item:hover {
+    background: #424242;
+}
+
+.menu-item:active {
+    transform: scale(.97);
+}
+
+/* MENU ICON CIRCLE */
+.menu-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #424242;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}

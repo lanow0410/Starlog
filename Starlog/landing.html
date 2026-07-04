@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Starlog</title>
+
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+  <link rel="stylesheet" href="./css/commonHeader.css">
+  <link rel="stylesheet" href="./css/landing.css" />
+</head>
+
+<body>
+
+  <div class="app">
+
+    <!-- HEADER -->
+    <div id="common-header-menu"></div>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+      <div class="indicator-wrap">
+        <div class="page-indicator">
+          <span id="current">1</span>&nbsp;/&nbsp;<span id="total">4</span>
+        </div>
+      </div>
+
+      <!-- 🔥 HERO (전부 이미지 1장) -->
+      <div class="hero">
+        <div class="slider">
+          <div class="slide"><img src="./img/main1.png" alt="hero" /></div>
+          <div class="slide"><img src="./img/main2.png" alt="hero" /></div>
+          <div class="slide"><img src="./img/main3.png" alt="hero" /></div>
+          <div class="slide"><img src="./img/main4.png" alt="hero" /></div>
+        </div>
+      </div>
+
+      <!-- DOTS -->
+      <div class="dots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <button class="primary-btn" onclick="location.href='./main.html'">서비스 둘러보기</button>
+      <a href="./login.html">
+        <button class="login-btn">로그인하기</button>
+      </a>
+    </footer>
+
+  </div>
+  <script src="./js/commonHeader.js"></script>
+  <script src="js/landing.js"></script>
+</body>
+
+</html>
