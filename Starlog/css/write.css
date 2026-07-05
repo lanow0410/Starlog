@@ -57,6 +57,217 @@ body {
   cursor: pointer;
 }
 
+/* selected menu button */
+/* 공통 감싸는 박스 (화면 중앙 정렬 및 좌우 여백) */
+.action-banner-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 24px;
+  box-sizing: border-box;
+  margin: 16px auto;
+  /* 위아래 요소들과의 간격 */
+}
+
+/* ================= 탭 버튼 그룹 스타일 ================= */
+.tab-btn-wrapper {
+  width: 100%;
+  /* 💡 390px 고정 해제 */
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 16px 0;
+  /* 💡 top 고정 대신 위아래 자연스러운 마진 배치 */
+}
+
+.tab-btn-container {
+  width: 100%;
+  /* 💡 341px 고정 해제하여 부모(.tab-btn-wrapper) 패딩안에 꽉 차게 변경 */
+  padding: 12px 8px;
+  background: #424242;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+/* 💡 버튼이 상자 안에서 균등하게 절반씩 나눠 먹도록 flex: 1 추가 */
+.tab-btn {
+  flex: 1;
+  /* 💡 width: 140px 고정 대신 반응형으로 비율 채우기 */
+  height: 40px;
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FEFEFE;
+  font-size: 16px;
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+/* 💡 선택된 활성화 상태 버튼 */
+.tab-btn.active {
+  background: #7C58F4;
+}
+
+/* ================= 동적 컨텐츠 공통 제어 ================= */
+.tab-content {
+  display: none;
+  width: 100%;
+  /* 💡 390px 고정 해제 */
+  padding: 0;
+  /* 💡 패딩 중첩 방지를 위해 0으로 변경 (.write-section 내부에 이미 24px 패딩이 있으므로) */
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* 💡 자바스크립트가 이 클래스를 껐다 켰다 하면서 화면을 전환합니다 */
+.tab-content.active-content {
+  display: inline-flex;
+}
+
+
+/* 2번: 사진 업로드 컨테이너 */
+.upload-container {
+  width: 100%;
+  max-width: 341px;
+  padding: 40px 75px;
+  background: #424242;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* 업로드 아이콘 원형 박스 */
+.upload-container .upload-icon-box {
+  width: 52px;
+  height: 52px;
+  background: #212121;
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload-container .upload-custom-img {
+  width: 24px;
+  /* 원하시는 아이콘 크기로 조절하세요 */
+  height: 24px;
+  object-fit: contain;
+  /* 이미지가 찌그러지지 않게 비율 유지 */
+}
+
+/* 안내 텍스트 */
+.upload-container .upload-text {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  color: #FEFEFE;
+  font-size: 16px;
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+/* ================= 연동 기록 불러오기 전용 디자인 ================= */
+
+/* 탭이 활성화되었을 때 중앙 정렬을 위한 스타일 */
+#content-sync.active-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 0 24px;
+  box-sizing: border-box;
+  width: 100%;
+  /* 💡 이 줄을 추가하면 양옆으로 넘치는 현상이 완벽히 해결됩니다! */
+}
+
+/* 1번: 스마트폰 태그 안내 상자 */
+.sync-tag-box {
+  width: 90%;
+  margin: 0 auto;
+  height: 300px;
+  background: #424242;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  box-sizing: border-box;
+  margin-bottom: 24px;
+}
+
+/* 아이콘 원형 배경 */
+.sync-icon-circle {
+  width: 52px;
+  height: 52px;
+  background: #212121;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 아이콘 이미지 배치 (필요시 내부 이미지 크기 조절) */
+.sync-icon-circle img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* 안내 텍스트 */
+.sync-text {
+  text-align: center;
+  color: #FEFEFE;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+/* 2번: 연동 시작하기 버튼 */
+.sync-start-btn {
+  margin: 0 auto;
+  width: 90%;
+  height: 48px;
+  background: #7C58F4;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.sync-start-btn:active {
+  transform: scale(0.98);
+}
+
+.sync-start-text {
+  color: #FEFEFE;
+  font-size: 16px;
+  font-weight: 600;
+}
+
 /* SIDE MENU */
 
 .side-menu {
@@ -335,6 +546,7 @@ body {
 .category-card.active {
   background: #757575;
 }
+
 .category-box {
   width: 100%;
 

@@ -1,0 +1,186 @@
+/* ================= 기본 초기화 및 레이아웃 ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #2c2c2c;
+    font-family: "Pretendard", sans-serif;
+    color: #ededed;
+    display: flex;
+    justify-content: center;
+}
+
+.app {
+    width: 100%;
+    max-width: 390px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* ================= HEADER ================= */
+.header {
+    width: 100%;
+    height: 56px;
+    margin-top: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 24px;
+}
+
+.logo {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+}
+
+.logo img {
+    display: block;
+}
+
+.close-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: #424242;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* ================= 중앙 콘텐츠 영역 (가로 342px 고정) ================= */
+.sync-main-content {
+    width: 342px;
+    margin: 0 auto;
+    margin-top: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* 1번: 중앙 원형 그래픽 부모 박스 */
+.sync-graphic-container {
+    position: relative;
+    width: 248px;
+    height: 248px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+/* 💡 충돌을 일으키던 공통 transform 요소를 제거하고 absolute 절대 정렬로 고정 */
+.layer-white,
+.layer-green-spin,
+.layer-dark-mask,
+.sync-main-img {
+    position: absolute;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+/* [순서 1] 맨 밑바탕: 큰 흰색 꽉 찬 원 */
+.layer-white {
+    width: 224px;
+    height: 224px;
+    background: #FFFDF6;
+    z-index: 10;
+}
+
+/* [순서 2] 중간: 초록색 회전 레이어 (정중앙 축 완전 고정) */
+.layer-green-spin {
+    width: 224px;
+    height: 224px;
+    z-index: 20;
+
+    background: conic-gradient(#76FF81 0deg,
+            rgba(118, 255, 129, 0.4) 60deg,
+            transparent 90deg);
+
+    /* 💡 기존 transform 정렬 대신 keyframes 내부에서 제어하므로 여기선 제외합니다 */
+    animation: spinRing 1.5s linear infinite;
+}
+
+/* [순서 3] 위: 안쪽을 덮어버릴 작은 검은색 원 (앱 배경색 매칭) */
+.layer-dark-mask {
+    width: 184px;
+    height: 184px;
+    background: #2C2C2C;
+    z-index: 30;
+}
+
+/* [순서 4] 맨 위: 캐릭터 이미지 */
+.sync-main-img {
+    width: 125px;
+    height: 125px;
+    object-fit: contain;
+    z-index: 40;
+}
+
+/* ================= 🔄 [가장 중요] 애니메이션 수정 ================= */
+@keyframes spinRing {
+    0% {
+        /* 💡 회전할 때 중심축 정렬(-50%, -50%)이 풀리지 않도록 꽉 잡아줍니다! */
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* ================= 2번: 상태 메시지 ================= */
+.syncing-status-title {
+    color: #EDEDED;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* ================= 3번: 연동 취소하기 버튼 ================= */
+.sync-cancel-btn {
+    background: none;
+    border: none;
+    color: #C4C4C4;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    cursor: pointer;
+    padding: 8px 16px;
+    transition: color 0.2s ease, transform 0.1s ease;
+
+    width: fit-content;
+    margin-top: auto;
+    /* 최하단 강제 고정 */
+    margin-bottom: 40px;
+}
+
+.sync-cancel-btn:hover {
+    color: #EDEDED;
+}
+
+/* ================= 🔄 애니메이션 정의 ================= */
+@keyframes spinRing {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

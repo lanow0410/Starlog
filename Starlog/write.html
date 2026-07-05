@@ -20,137 +20,146 @@
         <!-- HEADER -->
         <div id="common-header-menu"></div>
 
-        <section class="write-page">
+        <!-- 뒤로가기 -->
+        <div class="write-top">
 
-            <!-- 뒤로가기 -->
-            <div class="write-top">
+            <button class="back-btn">
+                <img src="./icons/back.svg" alt="back">
+            </button>
 
-                <button class="back-btn">
-                    <img src="./icons/back.svg" alt="back">
-                </button>
+            <h1>기록 추가하기</h1>
 
-                <h1>기록 추가하기</h1>
+            <div class="write-top-space"></div>
 
-                <div class="write-top-space"></div>
+        </div>
 
+        <!-- 1. 버튼 그룹 영역 (기록 남기기 / 연동 기록 불러오기) -->
+        <!-- 버튼 그룹 영역 -->
+        <div class="tab-btn-wrapper">
+            <div class="tab-btn-container">
+                <button type="button" id="btn-record" class="tab-btn active">기록 남기기</button>
+                <button type="button" id="btn-sync" class="tab-btn">연동 기록 불러오기</button>
             </div>
+        </div>
 
-            <!-- 제목 -->
-            <section class="write-section">
-                <div class="section-header single">
-                    <h2>제목 작성</h2>
-                </div>
+        <!-- 💡 HTML 파일 가장 최하단(</body> 직전)에 외부 JS 파일을 연결해 줍니다 -->
+        <script src="script.js"></script>
 
-                <p class="section-desc">
-                    기록을 한마디로 정의해보세요
-                </p>
 
-                <input type="text" class="write-input" placeholder="내용 입력">
 
-                <span class="error-text">
-                    에러 메세지 영역
-                </span>
-            </section>
+        <div class="dynamic-content-area">
+            <!-- 1) [기록 남기기] 선택 시 나타날 영역 -->
+            <div id="content-record" class="tab-content active-content">
+                <section class="write-page">
 
-            <!-- 내용 -->
-            <section class="write-section">
-                <div class="section-header single">
-                    <h2>내용 작성</h2>
-                </div>
-
-                <p class="section-desc">
-                    오늘의 활동을 간단히 남겨보세요
-                </p>
-
-                <textarea class="write-textarea" placeholder="내용 입력"></textarea>
-                <span class="error-text">
-                    에러 메세지 영역
-                </span>
-            </section>
-
-            <!-- 카테고리 -->
-            <section class="write-section">
-                <div class="section-header single">
-                    <h2>카테고리 선택</h2>
-                </div>
-
-                <p class="section-desc">
-                    오늘의 행동 유형을 선택해주세요
-                </p>
-
-                <div class="category-box">
-                    <div class="category-scroll">
-
-                        <button class="category-card active">
-                            <div class="category-icon yellow">
-                                <img src="./icons/Joy.png" alt="행복">
+                    <!-- 사진 업로드 영역 -->
+                    <div class="action-banner-wrapper">
+                        <div class="upload-container">
+                            <!-- 업로드 아이콘 (기존 피그마 사각형을 깔끔하게 대체 가능하도록 구조화) -->
+                            <div class="upload-icon-box">
+                                <img src="./icons/picture.svg" alt="업로드 아이콘" class="upload-custom-img">
                             </div>
-                            <span>행복</span>
-                        </button>
-
-                        <button class="category-card">
-                            <div class="category-icon pink">
-                                <img src="./icons/Love.png" alt="애정">
-                            </div>
-                            <span>애정</span>
-                        </button>
-
-                        <button class="category-card">
-                            <div class="category-icon blue">
-                                <img src="./icons/Peace.png" alt="평온">
-                            </div>
-                            <span>평온</span>
-                        </button>
-
-                        <button class="category-card">
-                            <div class="category-icon green">
-                                <img src="./icons/Calm.png" alt="안정">
-                            </div>
-                            <span>안정</span>
-                        </button>
-
-                        <button class="category-card">
-                            <div class="category-icon orange">
-                                <img src="./icons/Stress.png" alt="스트레스">
-                            </div>
-                            <span>스트레스</span>
-                        </button>
-
+                            <p class="upload-text">사진을 업로드해주세요</p>
+                        </div>
                     </div>
-                </div>
-            </section>
+                    <!-- 제목 -->
+                    <section class="write-section">
+                        <div class="section-header single">
+                            <h2>제목 작성</h2>
+                        </div>
+                        <p class="section-desc">기록을 한마디로 정의해보세요</p>
+                        <input type="text" class="write-input" placeholder="내용 입력">
+                        <span class="error-text">에러 메세지 영역</span>
+                    </section>
 
-            <!-- 태그 -->
-            <section class="write-section">
-                <div class="section-header single">
-                    <h2>태그 선택</h2>
-                </div>
+                    <!-- 내용 -->
+                    <section class="write-section">
+                        <div class="section-header single">
+                            <h2>내용 작성</h2>
+                        </div>
+                        <p class="section-desc">오늘의 활동을 간단히 남겨보세요</p>
+                        <textarea class="write-textarea" placeholder="내용 입력"></textarea>
+                        <span class="error-text">에러 메세지 영역</span>
+                    </section>
 
-                <p class="section-desc">
-                    활동의 맥락을 태그로 남겨보세요
-                </p>
+                    <!-- 카테고리 -->
+                    <section class="write-section">
+                        <div class="section-header single">
+                            <h2>카테고리 선택</h2>
+                        </div>
+                        <p class="section-desc">오늘의 행동 유형을 선택해주세요</p>
+                        <div class="category-box">
+                            <div class="category-scroll">
+                                <button class="category-card active">
+                                    <div class="category-icon yellow"><img src="./icons/Joy.png" alt="행복"></div>
+                                    <span>행복</span>
+                                </button>
+                                <button class="category-card">
+                                    <div class="category-icon pink"><img src="./icons/Love.png" alt="애정"></div>
+                                    <span>애정</span>
+                                </button>
+                                <button class="category-card">
+                                    <div class="category-icon blue"><img src="./icons/Peace.png" alt="평온"></div>
+                                    <span>평온</span>
+                                </button>
+                                <button class="category-card">
+                                    <div class="category-icon green"><img src="./icons/Calm.png" alt="안정"></div>
+                                    <span>안정</span>
+                                </button>
+                                <button class="category-card">
+                                    <div class="category-icon orange"><img src="./icons/Stress.png" alt="스트레스"></div>
+                                    <span>스트레스</span>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
 
-                <input type="text" class="write-input" placeholder="@ 사람 · # 맥락 · * 주제">
-                <span class="error-text">
-                    에러 메세지 영역
-                </span>
-            </section>
+                    <!-- 태그 -->
+                    <section class="write-section">
+                        <div class="section-header single">
+                            <h2>태그 선택</h2>
+                        </div>
+                        <p class="section-desc">활동의 맥락을 태그로 남겨보세요</p>
+                        <input type="text" class="write-input" placeholder="@ 사람 · # 맥락 · * 주제">
+                        <span class="error-text">에러 메세지 영역</span>
+                    </section>
 
-            <!-- 버튼 -->
-            <div class="write-actions">
-                <button class="cancel-btn">
-                    취소
-                </button>
-
-                <button class="save-btn">
-                    기록 저장하기
-                </button>
+                    <!-- 버튼 -->
+                    <div class="write-actions">
+                        <button class="cancel-btn">취소</button>
+                        <button class="save-btn">기록 저장하기</button>
+                    </div>
+                </section>
             </div>
 
-        </section>
+            <!-- 2) [연동 기록 불러오기] 선택 시 나타날 영역 -->
+            <div id="content-sync" class="tab-content">
+                <div class="sync-tag-box">
+                    <div class="sync-icon-circle">
+                        <!-- 업로드 아이콘 (기존 피그마 사각형을 깔끔하게 대체 가능하도록 구조화) -->
+                        <div class="upload-icon-box">
+                            <img src="./icons/picture.svg" alt="업로드 아이콘" class="upload-custom-img">
+                        </div>
+                    </div>
+                    <div class="sync-text">기기에 스마트폰을 태그해주세요</div>
+                </div>
+                <button class="sync-start-btn" onclick="location.href='peristalsis.html'">
+                    <div class="sync-start-text">연동 시작하기</div>
+                </button>
+            </div>
+        </div>
 
-    </div>
-    <script src="./js/commonHeader.js"></script>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-logo">Starlog</div>
+
+            <p>
+                Copyright ⓒ 2026, Starlog All rights reserved.
+            </p>
+        </footer>
+
+        <script src="./js/commonHeader.js"></script>
+        <script src="./js/write.js"></script>
 </body>
 
 </html>

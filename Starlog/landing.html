@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +8,6 @@
 
   <link rel="stylesheet" as="style" crossorigin
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
-  <link rel="stylesheet" href="./css/commonHeader.css">
   <link rel="stylesheet" href="./css/landing.css" />
 </head>
 
@@ -18,7 +16,12 @@
   <div class="app">
 
     <!-- HEADER -->
-    <div id="common-header-menu"></div>
+    <header class="header">
+      <button class="logo" onclick="location.href='main.html'">
+        <img src="icons/HeaderLogo.svg" alt="로고" />
+      </button>
+      <button class="close-btn"><img src="icons/exit.svg" alt="종료버튼" /></button>
+    </header>
 
     <!-- CONTENT -->
     <main class="content">
@@ -51,15 +54,13 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-      <button class="primary-btn" onclick="location.href='./main.html'">서비스 둘러보기</button>
+      <button class="primary-btn">서비스 둘러보기</button>
       <a href="./login.html">
         <button class="login-btn">로그인하기</button>
       </a>
     </footer>
 
   </div>
-  <script src="./js/commonHeader.js"></script>
   <script src="js/landing.js"></script>
 </body>
-
 </html>

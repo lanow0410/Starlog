@@ -37,10 +37,19 @@ body {
   border-bottom: none;
 }
 
-
 .logo {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
   font-size: 20px;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  display: block;
 }
 
 .close-btn {
@@ -54,143 +63,136 @@ body {
   color: #ededed;
 }
 
-/* CONTENT */
-.content {
-  flex: 1;
+/* ================= 중앙 콘텐츠 영역 (가로 342px 고정) ================= */
+.sync-main-content {
+  width: 342px;
+  margin: auto auto;
+  /* 화면 정중앙 배치 */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* PAGE */
-.indicator-wrap {
-  align-self: flex-start;
-  margin-left: 21px;
-}
-.page-indicator {
-  width: 56px;
-  height: 40px;
-
+/* 1번: 중앙 원형 그래픽 구조 */
+.sync-graphic-container {
+  position: relative;
+  width: 248px;
+  height: 248px;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  background: #757575;
-  border-radius: 20px;
+  margin-bottom: 40px;
 }
 
-/* HERO IMAGE */
-.hero {
-  width: 390px;
-  height: 428px;
-
-  padding-left: 24px;
-  padding-right: 25px;
-
-  box-sizing: border-box;
-
-  display: flex;
-  justify-content: left;
-  align-items: center;
+.circle-layer {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-sizing: content-box;
 }
 
-.hero img {
-  width: 100%;
-  max-width: 341px; /* 390 - 24 - 25 */
-  height: auto;
-
-  border-radius: 16px;
+.layer-white {
+  border: 24px #FFFDF6 solid;
+  z-index: 1;
 }
 
-.slider {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-
-  -ms-overflow-style: none;  /* IE/Edge */
-  scrollbar-width: none;     /* Firefox */
+.layer-green-blur {
+  border: 24px #76FF81 solid;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  filter: blur(5px);
+  z-index: 2;
 }
 
-.slider::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
+.layer-bg {
+  width: 168.89px;
+  height: 168.89px;
+  background: #2C2C2C;
+  z-index: 3;
 }
 
-.slide {
-  flex: 0 0 100%;
-  scroll-snap-align: center;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.sync-main-img {
+  position: absolute;
+  width: 125.11px;
+  height: 125.11px;
+  border-radius: 50%;
+  z-index: 4;
+  box-shadow: 0px 0px 0.83px #675D18, 0px 0px 1.66px #675D18, 0px 0px 5.83px #675D18, 0px 0px 11.67px #675D18, 0px 0px 20.01px #675D18, 0px 0px 35.02px #675D18;
 }
 
-.slide img {
-  width: 340px;
-  border-radius: 16px;
+/* 피그마 눈/도트 장식 요소 */
+.sync-deco-dot {
+  position: absolute;
+  z-index: 5;
 }
 
-/* DOTS */
-.dots {
-  margin-top: 32px;
-  margin-bottom: 50px;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  align-items: center;
+.dot-outline {
+  width: 6.16px;
+  height: 1.94px;
+  outline: 4px #441312 solid;
+  outline-offset: -2px;
 }
 
-.dot {
-  width: 8px;
-  height: 8px;
-  background: #ededed;
-  border-radius: 999px;
+.dot-white-1 {
+  width: 13.86px;
+  height: 13.86px;
+  background: #FFFFFE;
+  border-radius: 50%;
 }
 
-.dot.active {
-  width: 24px;
-  background: #7c58f4;
-  border-radius: 20px;
+.dot-dark-1 {
+  width: 9.24px;
+  height: 9.24px;
+  background: #441312;
+  border-radius: 50%;
 }
 
-/* FOOTER */
-.footer {
-  margin-top: auto;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  /* padding-bottom: 100px; */
-  margin-bottom: 20px;
+.dot-white-2 {
+  width: 13.86px;
+  height: 13.86px;
+  transform: rotate(180deg);
+  transform-origin: top left;
+  background: #FFFFFE;
+  border-radius: 50%;
 }
 
+.dot-dark-2 {
+  width: 9.24px;
+  height: 9.24px;
+  transform: rotate(180deg);
+  transform-origin: top left;
+  background: #441312;
+  border-radius: 50%;
+}
 
-.primary-btn {
-  width: 304px;
-  height: 52px;
+/* 2번: 상태 메시지 */
+.syncing-status-title {
+  color: #EDEDED;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+  text-align: center;
+  margin-bottom: 60px;
+}
 
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+/* 3번: 연동 취소하기 버튼 */
+.sync-cancel-btn {
+  background: none;
   border: none;
-  border-radius: 120px;
-
-  background: #424242;
-  color: #fefefe;
-
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 28px;
-}
-
-.login-btn {
-  border: none;
-  background: transparent;
-
-  color: #c4c4c4;
+  color: #C4C4C4;
   font-size: 16px;
   font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  cursor: pointer;
+  padding: 8px 16px;
+  transition: color 0.2s ease, transform 0.1s ease;
+}
+
+.sync-cancel-btn:hover {
+  color: #EDEDED;
+}
+
+.sync-cancel-btn:active {
+  transform: scale(0.97);
 }
