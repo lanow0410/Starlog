@@ -23,7 +23,7 @@ body {
     background: #2c2c2c;
 }
 
-.app h2{
+.app h2 {
     font-size: 20px;
     font-weight: 800;
 }
@@ -301,6 +301,7 @@ body {
 
     cursor: pointer;
 }
+
 .record-btn img {
     width: 40px;
     height: 40px;
@@ -316,13 +317,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background:
-        conic-gradient(
-            #23AC9C 0% 62%,
-            #E8650A 62% 94%,
-            #EDA21F 94% 100%
-        );
 }
 
 .inner-circle {

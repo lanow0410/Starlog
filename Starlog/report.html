@@ -31,7 +31,7 @@
 
             <section class="date-selector">
                 <span>DAILY</span>
-                <span>12.21.</span>
+                <span id="reportDate">--.--.</span>
                 <button class="date-btn">
                     <img src="./icons/arrowDown.svg" alt="select date">
                 </button>
@@ -39,177 +39,315 @@
 
             <section class="summary-section">
                 <h2>기록 요약</h2>
-                <p>어제보다 기록의 밀도가 높아졌어요</p>
-
-
+                <p id="summaryText">기록을 분석하고 있어요</p>
             </section>
 
             <section class="weekly-card">
+
                 <h3>이번주 활동내역</h3>
 
-                <div class="week-chart">
-                    <div class="day">
-                        <span>9</span>
-                        <div class="bar h55"></div>
+                <div class="week-chart" id="weekChart">
+
+                    <div class="day" data-day="1">
+                        <span class="count">0</span>
+                        <div class="bar"></div>
                         <span>월</span>
                     </div>
 
-                    <div class="day">
-                        <span>3</span>
-                        <div class="bar h28"></div>
+                    <div class="day" data-day="2">
+                        <span class="count">0</span>
+                        <div class="bar"></div>
                         <span>화</span>
                     </div>
 
-                    <div class="day">
-                        <span>1</span>
-                        <div class="bar h4"></div>
+                    <div class="day" data-day="3">
+                        <span class="count">0</span>
+                        <div class="bar"></div>
                         <span>수</span>
                     </div>
 
-                    <div class="day active">
-                        <span>2</span>
-                        <div class="bar h16"></div>
+                    <div class="day" data-day="4">
+                        <span class="count">0</span>
+                        <div class="bar"></div>
                         <span>목</span>
                     </div>
 
-                    <div class="day"><span>금</span></div>
-                    <div class="day"><span>토</span></div>
-                    <div class="day"><span>일</span></div>
+                    <div class="day" data-day="5">
+                        <span class="count">0</span>
+                        <div class="bar"></div>
+                        <span>금</span>
+                    </div>
+
+                    <div class="day" data-day="6">
+                        <span class="count">0</span>
+                        <div class="bar"></div>
+                        <span>토</span>
+                    </div>
+
+                    <div class="day" data-day="0">
+                        <span class="count">0</span>
+                        <div class="bar"></div>
+                        <span>일</span>
+                    </div>
+
                 </div>
 
                 <div class="weekly-footer">
                     <span>하루 평균 기록수</span>
-                    <span>3.9 기록</span>
+                    <span id="averageCount">0 기록</span>
                 </div>
+
             </section>
 
             <section class="activity-section">
-                <h2>대화 중심 하루였어요</h2>
-                <p>전체 활동 중 52%가 대화 관련 행동이였어요</p>
+
+                <h2 id="activityTitle">
+                    오늘의 감정 기록
+                </h2>
+
+                <p id="activityDescription">
+                    오늘 작성한 기록을 분석했어요
+                </p>
+
 
                 <div class="summary-cards">
+
                     <div class="category-card">
+
                         <div class="summary-icon">
+                            <img id="topCategoryIcon" src="icons/Joy.png" alt="">
+                        </div>
+
+                        <span class="category-name" id="topCategoryName">
+                            행복
+                        </span>
+
+                    </div>
+
+
+                    <div class="count-card">
+
+                        <div class="count">
+                            <strong id="todayCount">0</strong>개
+                        </div>
+
+                        <p>오늘의 기록수</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="distribution-card">
+
+                    <h3>오늘의 활동 분포</h3>
+
+
+                    <!-- 행복 -->
+                    <div class="progress-item">
+
+                        <div class="activity-icon">
                             <img src="icons/Joy.png" alt="">
                         </div>
 
-                        <span class="category-name">대화</span>
+                        <div class="activity-info">
+
+                            <div class="activity-top">
+
+                                <span class="activity-name">
+                                    행복
+                                </span>
+
+                                <span class="activity-percent" data-category-percent="행복">
+                                    0%
+                                </span>
+
+                            </div>
+
+                            <div class="progress">
+
+                                <div class="fill" data-category-fill="행복"></div>
+
+                            </div>
+
+                        </div>
+
                     </div>
 
-                    <div class="count-card">
-                        <div class="count">
-                            <strong>40</strong>개
+
+                    <!-- 애정 -->
+                    <div class="progress-item">
+
+                        <div class="activity-icon">
+                            <img src="icons/Love.png" alt="">
                         </div>
-                        <p>오늘의 기록수</p>
+
+                        <div class="activity-info">
+
+                            <div class="activity-top">
+
+                                <span class="activity-name">
+                                    애정
+                                </span>
+
+                                <span class="activity-percent" data-category-percent="애정">
+                                    0%
+                                </span>
+
+                            </div>
+
+                            <div class="progress">
+
+                                <div class="fill" data-category-fill="애정"></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 평온 -->
+                    <div class="progress-item">
+
+                        <div class="activity-icon">
+                            <img src="icons/Peace.png" alt="">
+                        </div>
+
+                        <div class="activity-info">
+
+                            <div class="activity-top">
+
+                                <span class="activity-name">
+                                    평온
+                                </span>
+
+                                <span class="activity-percent" data-category-percent="평온">
+                                    0%
+                                </span>
+
+                            </div>
+
+                            <div class="progress">
+
+                                <div class="fill" data-category-fill="평온"></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 안정 -->
+                    <div class="progress-item">
+
+                        <div class="activity-icon">
+                            <img src="icons/Calm.png" alt="">
+                        </div>
+
+                        <div class="activity-info">
+
+                            <div class="activity-top">
+
+                                <span class="activity-name">
+                                    안정
+                                </span>
+
+                                <span class="activity-percent" data-category-percent="안정">
+                                    0%
+                                </span>
+
+                            </div>
+
+                            <div class="progress">
+
+                                <div class="fill" data-category-fill="안정"></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 스트레스 -->
+                    <div class="progress-item">
+
+                        <div class="activity-icon">
+                            <img src="icons/Stress.png" alt="">
+                        </div>
+
+                        <div class="activity-info">
+
+                            <div class="activity-top">
+
+                                <span class="activity-name">
+                                    스트레스
+                                </span>
+
+                                <span class="activity-percent" data-category-percent="스트레스">
+                                    0%
+                                </span>
+
+                            </div>
+
+                            <div class="progress">
+
+                                <div class="fill" data-category-fill="스트레스"></div>
+
+                            </div>
+
+                        </div>
+
                     </div>
 
                 </div>
 
-                <div class="distribution-card">
-                    <h3>오늘의 활동 분포</h3>
-
-                    <!-- 대화 -->
-                    <div class="progress-item">
-                        <!-- 왼쪽 이미지 -->
-                        <div class="activity-icon">
-                            <img src="./icons/Joy.png" alt="">
-                        </div>
-
-                        <!-- 오른쪽 -->
-                        <div class="activity-info">
-                            <!-- 위 -->
-                            <div class="activity-top">
-                                <span class="activity-name">대화</span>
-                                <span class="activity-percent">52%</span>
-                            </div>
-                            <div class="progress">
-                                <div class="fill w52"></div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- 소비 -->
-                    <div class="progress-item">
-                        <!-- 왼쪽 이미지 -->
-                        <div class="activity-icon">
-                            <img src="./icons/Love.png" alt="">
-                        </div>
-
-                        <!-- 오른쪽 -->
-                        <div class="activity-info">
-                            <div class="activity-top">
-                                <span class="activity-name">소비</span>
-                                <span class="activity-percent">18%</span>
-                            </div>
-                            <div class="progress">
-                                <div class="fill w18"></div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- 생산 -->
-                    <div class="progress-item">
-                        <!-- 왼쪽 이미지 -->
-                        <div class="activity-icon">
-                            <img src="./icons/Peace.png" alt="">
-                        </div>
-
-                        <!-- 오른쪽 -->
-                        <div class="activity-info">
-                            <div class="activity-top">
-                                <span class="activity-name">생산</span>
-                                <span class="activity-percent">30%</span>
-                            </div>
-                            <div class="progress">
-                                <div class="fill w30"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </section>
 
             <section class="tag-section">
-                <h2>맥락 기록이 많았어요</h2>
-                <p>전체 활동 중 62%가 이동중 일어났어요</p>
+
+                <h2 id="tagTitle">
+                    맥락 기록이 많았어요
+                </h2>
+
+                <p id="tagDescription">
+                    기록에 사용된 태그를 분석했어요
+                </p>
+
 
                 <div class="tag-card">
+
                     <h3>오늘의 태그 흐름</h3>
+
                     <div class="tag-flow">
 
-                        <!-- 도넛 -->
                         <div class="donut-chart">
                             <div class="inner-circle"></div>
                         </div>
 
-                        <!-- 범례 -->
-                        <div class="tag-legend">
-                            <div class="legend-item">
-                                <span class="dot firstDot"></span>
-                                <span>#이동중</span>
-                            </div>
-                            <div class="legend-item">
-                                <span class="dot secondDot"></span>
-                                <span>#아침</span> <span class="new-tag">4개</span>
-                            </div>
-                            <div class="legend-item">
-                                <span class="dot thirdDot"></span>
-                                <span>@신희</span>
-                            </div>
+
+                        <div class="tag-legend" id="tagLegend">
+
+                            <!-- JS 생성 -->
+
                         </div>
+
                     </div>
+
                 </div>
+
             </section>
 
             <section class="insight-card">
+
                 <h3>데일리 인사이트</h3>
-                <p>
-                    신희 태그가 1회 반복되었어요.<br>
-                    아침 태그가 새로 추가되었어요.
+
+                <p id="insightText">
+                    기록을 분석하고 있어요.
                 </p>
+
             </section>
 
             <section class="record-section">
@@ -230,6 +368,7 @@
 
     </div>
     <script src="./js/commonHeader.js"></script>
+    <script src="./js/report.js"></script>
 </body>
 
 </html>

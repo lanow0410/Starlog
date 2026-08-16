@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>기록 상세</title>
-
+    <link rel="stylesheet" href="./css/commonHeader.css">
     <link rel="stylesheet" href="css/recordDetail.css">
 </head>
 
@@ -15,17 +15,8 @@
 
         <!-- ================= HEADER ================= -->
 
-        <header class="header">
-
-            <div class="logo">
-                <img src="icons/HeaderLogo.svg" alt="Starlog">
-            </div>
-
-            <button class="menu-btn">
-                ☰
-            </button>
-
-        </header>
+        <!-- HEADER -->
+        <div id="common-header-menu"></div>
 
         <!-- ================= DETAIL ================= -->
 
@@ -39,7 +30,7 @@
                     <img src="icons/back.svg" alt="">
                 </button>
 
-                <h1>제목 영역</h1>
+                <h1 id="detailTitle">제목 영역</h1>
 
                 <div class="top-space"></div>
 
@@ -57,7 +48,7 @@
 
             <div class="detail-image">
 
-                <img src="https://placehold.co/452x254" alt="">
+                <img id="detailImage" src="https://placehold.co/452x254" alt="기록 이미지">
 
                 <button class="image-edit-btn">
                     <img src="icons/edit.svg" alt="">
@@ -73,10 +64,8 @@
                     기록 내용
                 </div>
 
-                <p class="detail-content">
-                    오랜만에 친구 만나서 같이 수다 떨음<br>
-                    최근 유행하는 영화도 보러 갔다옴<br>
-                    휴식되는 느낌
+                <p class="detail-content" id="detailContent">
+                    기록 내용을 불러오는 중...
                 </p>
 
             </article>
@@ -153,15 +142,7 @@
                     선택된 태그
                 </div>
 
-                <div class="tag-list">
-
-                    <span class="tag">신희</span>
-
-                    <span class="tag">좋은날좋은일</span>
-
-                    <span class="tag">외식</span>
-
-                </div>
+                <div class="tag-list" id="detailTags"></div>
 
             </article>
 
@@ -191,155 +172,14 @@
 
                 </div>
 
-                <span class="page-count">
-                    1 / 12
+                <span class="page-count" id="relatedCount">
+                    0 / 0
                 </span>
 
             </div>
 
-            <div class="related-list">
-
-                <!-- 카드1 -->
-
-                <article class="diary-card">
-
-                    <div class="card-header">
-
-                        <div class="emotion-icon">
-
-                            <div class="emotion-bg"></div>
-
-                            <img class="emotion-image" src="icons/Joy.png" alt="">
-
-                        </div>
-
-                        <span class="nickname">행복</span>
-
-                        <span class="dot">·</span>
-
-                        <span class="date">26년 4월 12일</span>
-
-                    </div>
-
-                    <div class="card-body">
-
-                        <div class="card-image">
-
-                            <img src="https://placehold.co/164x92" alt="">
-
-                        </div>
-
-                        <div class="card-info">
-
-                            <p class="card-content">
-
-                                오랜만에 친구 만나서 같이 수다 떨음<br>
-
-                                최근 유행하는 영화도 보러 갔다옴
-
-                            </p>
-
-                            <div class="tag-list">
-
-                                <span class="tag">
-                                    영화관
-                                </span>
-
-                                <span class="tag">
-                                    휴식
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-                <!-- 카드2 -->
-
-                <article class="diary-card">
-
-                    <div class="card-header">
-
-                        <div class="emotion-icon">
-                            <div class="emotion-bg"></div>
-                            <img class="emotion-image" src="icons/Joy.png" alt="">
-                        </div>
-
-                        <span class="nickname">행복</span>
-                        <span class="dot">·</span>
-                        <span class="date">26년 4월 12일</span>
-
-                    </div>
-
-                    <div class="card-body">
-
-                        <div class="card-image">
-                            <img src="https://placehold.co/164x92" alt="">
-                        </div>
-
-                        <div class="card-info">
-
-                            <p class="card-content">
-                                오랜만에 친구 만나서 같이 수다 떨음<br>
-                                최근 유행하는 영화도 보러 갔다옴
-                            </p>
-
-                            <div class="tag-list">
-                                <span class="tag">영화관</span>
-                                <span class="tag">휴식</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 카드3 -->
-
-                <article class="diary-card">
-
-                    <div class="card-header">
-
-                        <div class="emotion-icon">
-                            <div class="emotion-bg"></div>
-                            <img class="emotion-image" src="icons/Joy.png" alt="">
-                        </div>
-
-                        <span class="nickname">행복</span>
-                        <span class="dot">·</span>
-                        <span class="date">26년 4월 12일</span>
-
-                    </div>
-
-                    <div class="card-body">
-
-                        <div class="card-image">
-                            <img src="https://placehold.co/164x92" alt="">
-                        </div>
-
-                        <div class="card-info">
-
-                            <p class="card-content">
-                                오랜만에 친구 만나서 같이 수다 떨음<br>
-                                최근 유행하는 영화도 보러 갔다옴
-                            </p>
-
-                            <div class="tag-list">
-                                <span class="tag">영화관</span>
-                                <span class="tag">휴식</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
+            <div class="related-list" id="relatedList">
+                <!-- JS가 생성 -->
             </div>
 
             <!-- 메인으로 -->
@@ -365,7 +205,8 @@
         </footer>
 
     </div>
-
+    <script src="./js/commonHeader.js"></script>
+    <script src="./js/recordDetail.js"></script>
 </body>
 
 </html>

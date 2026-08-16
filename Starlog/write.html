@@ -54,13 +54,21 @@
 
                     <!-- 사진 업로드 영역 -->
                     <div class="action-banner-wrapper">
-                        <div class="upload-container">
-                            <!-- 업로드 아이콘 (기존 피그마 사각형을 깔끔하게 대체 가능하도록 구조화) -->
+
+                        <input type="file" id="photo-input" accept="image/*" hidden>
+
+                        <label for="photo-input" class="upload-container">
+
                             <div class="upload-icon-box">
                                 <img src="./icons/picture.svg" alt="업로드 아이콘" class="upload-custom-img">
                             </div>
-                            <p class="upload-text">사진을 업로드해주세요</p>
-                        </div>
+
+                            <p class="upload-text">
+                                사진을 업로드해주세요
+                            </p>
+
+                        </label>
+
                     </div>
                     <!-- 제목 -->
                     <section class="write-section">
